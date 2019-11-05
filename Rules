@@ -1,7 +1,12 @@
 # Battle
-It is a game where I play with the computer.I make move with my monster.That monster is being defended by computer's monster.So while making 
-move I have to be careful about the power of the move and my hp.As long as my hp is not zero I am good to play. Damage dealt=attacking 
-monster's attack stat + attacking monster move's power-defending monster's defense stat.The damage dealt has to be deducted from the
-defender's hp.But there is a chance that your move might be a miss.You 
-can see all the moves that you made through out the play after the game is over.
-So good luck playing it.
+The battle system first asks each player to choose their next move. The CPU player will select their move
+randomly. The human player will present a list of moves to the user on the console, and ask the user to
+select one (e.g. by entering a number 1-4) on the console. The battle system then selects which monster
+is faster (a monster with a higher speed stat is faster). The faster monster uses their move first.
+Then, determine if the move will hit the defending monster. I have generated a random floating point number
+between 0.0 and 1.0. If the number is greater than the accuracy of the move (impossible for some moves
+that have accuracy 1.0), then the move is a miss and no damage is dealt to the defending monster.
+damageDealth = attacking monster's attack stat + attacking monster move's power - defending monster's defense stat.The calculated damage is 
+then subtracted from the HP of the defending monster. If the HP becomes less than (or equal to) zero, the monster is dead and cannot
+attack any further, including the move selected at the beginning of this round. You can see all the moves that you made through out the play 
+after the game is over.So good luck playing it and remember to keep your HP up.
